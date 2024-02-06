@@ -4,7 +4,7 @@ using ToDoList.DataAccess.Implementations.Entities;
 
 namespace ToDoList.DataAccess.Repositories
 {
-    public class ToDoElementRepository(ApplicationContext context, IConfiguration configuration) : GenericRepository<ToDoElement>(context, configuration), IToDoEntityRepository
+    public class ToDoElementRepository(ApplicationContext context, IConfiguration configuration) : GenericRepository<ToDoElement>(context, configuration), IToDoElementRepository
     {
     }
 }

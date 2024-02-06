@@ -1311,11 +1311,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\for_work\\teacher\\C_sharp_programming\\ToDoList\\ToDoList.csproj",
+      "projectUniqueName": "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\ToDoList.csproj",
       "projectName": "ToDoList",
-      "projectPath": "D:\\for_work\\teacher\\C_sharp_programming\\ToDoList\\ToDoList.csproj",
+      "projectPath": "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\ToDoList.csproj",
       "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
-      "outputPath": "D:\\for_work\\teacher\\C_sharp_programming\\ToDoList\\obj\\",
+      "outputPath": "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
