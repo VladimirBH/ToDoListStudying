@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<ToDoList.DataAccess.Implementations.Entities>
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -38,33 +39,18 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Buy groceries for next week</td>
-                  <td>In progress</td>
-                  <td>
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                    <button type="submit" class="btn btn-success ms-1">Finished</button>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Renew car insurance</td>
-                  <td>In progress</td>
-                  <td>
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                    <button type="submit" class="btn btn-success ms-1">Finished</button>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Sign up for online course</td>
-                  <td>In progress</td>
-                  <td>
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                    <button type="submit" class="btn btn-success ms-1">Finished</button>
-                  </td>
-                </tr>
+                @foreach (var toDoElement in Model)
+                {
+                  <tr>
+                    <th scope="row">@toDoElement.Id</th>
+                    <td>@toDoElement.Text</td>
+                    <td>@toDoElement.ElementStatus</td>
+                    <td>
+                      <button type="submit" class="btn btn-danger">Delete</button>
+                      <button type="submit" class="btn btn-success ms-1">Finished</button>
+                    </td>
+                  </tr>
+                }
               </tbody>
             </table>
 

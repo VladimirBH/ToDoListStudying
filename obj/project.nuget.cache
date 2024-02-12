@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0NdEe4aXKxsXuDAAxSTiWH0w3ZhdX+jCHbmntOzAebpgiS1QvL912ncxJA+k3HZygkL2ptPhkl/BLPIaOI9L3Q==",
+  "dgSpecHash": "d4f0W1iN9nlZbuqzw7Nu8Gk3s6N4Adjooj3ruEtP9FMM1TI3po/sW2fLvq8742vZV7UXhiuK8iiEAvJ2b4hpYw==",
   "success": true,
-  "projectFilePath": "D:\\for_work\\teacher\\C_sharp_programming\\Program\\todolist\\ToDoList.csproj",
+  "projectFilePath": "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\ToDoList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vladi\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0\\microsoft.entityframeworkcore.8.0.0.nupkg.sha512",
     "C:\\Users\\vladi\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.0\\microsoft.entityframeworkcore.abstractions.8.0.0.nupkg.sha512",

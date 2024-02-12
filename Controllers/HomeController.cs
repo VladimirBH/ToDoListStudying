@@ -1,21 +1,22 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using ToDoList.DataAccess.Repositories;
 using ToDoList.Models;
 
 namespace ToDoList.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    ToDoElementRepository repository;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ToDoElementRepository context)
     {
-        _logger = logger;
+        repository = context;
     }
 
     public IActionResult Index()
     {
-        return View();
+        return View(repository.GetAll().ToList());
     }
 
     public IActionResult Privacy()
