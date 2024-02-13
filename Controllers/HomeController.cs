@@ -1,22 +1,22 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.DataAccess.Repositories;
+using ToDoList.DataAccess.Contracts;
 using ToDoList.Models;
 
 namespace ToDoList.Controllers;
 
 public class HomeController : Controller
 {
-    ToDoElementRepository repository;
+    private readonly IToDoElementRepository _iToDoElementRepository;
 
-    public HomeController(ToDoElementRepository context)
+    public HomeController(IToDoElementRepository context)
     {
-        repository = context;
+        _iToDoElementRepository = context;
     }
 
     public IActionResult Index()
     {
-        return View(repository.GetAll().ToList());
+        return View(_iToDoElementRepository.GetAll().ToList());
     }
 
     public IActionResult Privacy()

@@ -9,7 +9,6 @@ namespace ToDoList.DataAccess.Repositories
         protected readonly ApplicationContext Context = context;
         protected readonly IConfiguration Configuration = configuration;
 
-
         public void Add(T entity)
         {
             Context.Set<T>().Add(entity);

@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using ToDoList.DataAccess.Contracts;
 using ToDoList.DataAccess.DBContexts;
 using ToDoList.DataAccess.Repositories;
+using ToDoList.DataAccess.Implementations.Entities;
 
 
 var confbuilder = new ConfigurationBuilder()
@@ -12,12 +13,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
 var connectionString = builder.Configuration["ConnectionStrings:DefaultConnection"];
+
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseNpgsql(connectionString));
 
 #region Repositories
-    builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-    builder.Services.AddTransient<IToDoElementRepository, ToDoElementRepository>();
+    builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+    builder.Services.AddScoped<IToDoElementRepository, ToDoElementRepository>();
 #endregion
 
 var app = builder.Build();

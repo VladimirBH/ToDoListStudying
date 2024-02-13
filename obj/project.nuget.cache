@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "d4f0W1iN9nlZbuqzw7Nu8Gk3s6N4Adjooj3ruEtP9FMM1TI3po/sW2fLvq8742vZV7UXhiuK8iiEAvJ2b4hpYw==",
+  "dgSpecHash": "C5aM/4oaiz7QaHpJUOekQJEqZrJx+TtjRvF8rzyNDua9fPhbXuILfbehBiIMtEYiGkIeMkhpR9w8gs2KCrCVYw==",
   "success": true,
   "projectFilePath": "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\ToDoList.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,7 @@
     "C:\\Users\\vladi\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\vladi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "C:\\Users\\vladi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+    "C:\\Users\\vladi\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\vladi\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
     "C:\\Users\\vladi\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
     "C:\\Users\\vladi\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
