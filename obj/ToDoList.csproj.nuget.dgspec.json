@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\ToDoList.csproj": {}
+    "/app/ToDoList/ToDoList.csproj": {}
   },
   "projects": {
-    "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\ToDoList.csproj": {
+    "/app/ToDoList/ToDoList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\ToDoList.csproj",
+        "projectUniqueName": "/app/ToDoList/ToDoList.csproj",
         "projectName": "ToDoList",
-        "projectPath": "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\ToDoList.csproj",
-        "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
-        "outputPath": "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\obj\\",
+        "projectPath": "/app/ToDoList/ToDoList.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/app/ToDoList/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\vladi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,12 +32,21 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -80,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

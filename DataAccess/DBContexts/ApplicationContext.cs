@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ToDoList.DataAccess.Implementations.Entities;
 
 namespace ToDoList.DataAccess.DBContexts
@@ -13,9 +12,6 @@ namespace ToDoList.DataAccess.DBContexts
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasPostgresEnum<Status>();
-            modelBuilder.Entity<ToDoElement>(entity =>
-                entity.Property(e => e.ElementStatus).HasColumnType("status_enum"));
            
         }
 

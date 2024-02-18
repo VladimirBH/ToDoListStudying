@@ -1,5 +1,4 @@
 using System.Linq.Expressions;
-using ToDoList.DataAccess.Implementations.Entities;
 
 
 namespace ToDoList.DataAccess.Contracts

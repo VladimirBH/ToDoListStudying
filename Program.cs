@@ -2,18 +2,22 @@ using Microsoft.EntityFrameworkCore;
 using ToDoList.DataAccess.Contracts;
 using ToDoList.DataAccess.DBContexts;
 using ToDoList.DataAccess.Repositories;
-using ToDoList.DataAccess.Implementations.Entities;
 
-
-var confbuilder = new ConfigurationBuilder()
-.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
 var builder = WebApplication.CreateBuilder(args);
 
+if(builder.Environment.IsDevelopment())
+{
+    var confbuilder = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.Development.json", optional: false, reloadOnChange: true);
+}
+else
+{
+    var confbuilder = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: false);
+}
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-
 var connectionString = builder.Configuration["ConnectionStrings:DefaultConnection"];
 
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseNpgsql(connectionString));

@@ -33,7 +33,7 @@
                 <tr>
                   <th scope="col">No.</th>
                   <th scope="col">Todo item</th>
-                  <th scope="col">Status</th>
+                  <th scope="col">Completed</th>
                   <th scope="col">Actions</th>
                 </tr>
               </thead>
@@ -43,7 +43,9 @@
                   <tr>
                     <th scope="row">@toDoElement.Id</th>
                     <td>@toDoElement.Text</td>
-                    <td>@toDoElement.ElementStatus</td>
+                    <td>
+                        <input type="checkbox" checked="@toDoElement.Completed">
+                    </td>
                     <td>
                       <button type="submit" class="btn btn-danger">Delete</button>
                       <button type="submit" class="btn btn-success ms-1">Finished</button>
