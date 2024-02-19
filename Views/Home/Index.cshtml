@@ -11,7 +11,7 @@
 
             <h4 class="text-center my-3 pb-3">To Do App</h4>
 
-            <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
+            <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2" method="post">
               <div class="col-12">
                 <div class="form-outline">
                   <input type="text" id="form1" class="form-control" />
@@ -44,7 +44,7 @@
                     <th scope="row">@toDoElement.Id</th>
                     <td>@toDoElement.Text</td>
                     <td>
-                        <input type="checkbox" checked="@toDoElement.Completed">
+                        <input class="form-check-input" type="checkbox" checked="@toDoElement.Completed" onClick="return false;">
                     </td>
                     <td>
                       <button type="submit" class="btn btn-danger">Delete</button>
