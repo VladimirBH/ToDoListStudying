@@ -12,7 +12,10 @@ namespace ToDoList.DataAccess.DBContexts
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           
+           modelBuilder.Entity<ToDoElement>(entity =>
+            {
+                entity.Property(e => e.Id).UseIdentityColumn(); 
+            });
         }
 
     }

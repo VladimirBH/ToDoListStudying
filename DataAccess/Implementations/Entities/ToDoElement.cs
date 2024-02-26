@@ -11,5 +11,12 @@ namespace ToDoList.DataAccess.Implementations.Entities
 
         [Column("completed")]
         public bool Completed {get; set;}
+
+        public ToDoElement(string text)
+        {
+            Id = 0;
+            Text = text;
+            Completed = false;
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ToDoList.DataAccess.Contracts;
+using ToDoList.DataAccess.Implementations.Entities;
 using ToDoList.Models;
 
 namespace ToDoList.Controllers;
@@ -22,6 +23,33 @@ public class HomeController : Controller
     public IActionResult Privacy()
     {
         return View();
+    }
+    
+    [HttpGet, ActionName("Delete")]
+    public IActionResult DeleteElement(int id)
+    {
+        _iToDoElementRepository.Remove(_iToDoElementRepository.GetById(id));
+        _iToDoElementRepository.SaveChanges();
+        return RedirectToAction("Index");
+    }
+
+    [HttpPost, ActionName("Add")]
+    public IActionResult AddElement(string textElement)
+    {
+        var newToDoElement = new ToDoElement(textElement);
+        _iToDoElementRepository.Add(newToDoElement);
+        _iToDoElementRepository.SaveChanges();
+        return RedirectToAction("Index");
+    }
+
+    [HttpGet, ActionName("Finish")]
+    public IActionResult FinishElement(int id)
+    {
+        var changedToDoElement = _iToDoElementRepository.GetById(id);
+        changedToDoElement.Completed = true;
+        _iToDoElementRepository.Update(changedToDoElement);
+        _iToDoElementRepository.SaveChanges();
+        return RedirectToAction("Index");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
