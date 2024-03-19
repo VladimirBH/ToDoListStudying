@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\ToDoList.csproj": {}
+    "D:\\for_work\\teacher\\C_sharp_programming\\Program1\\Program\\ToDoList\\ToDoList.csproj": {}
   },
   "projects": {
-    "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\ToDoList.csproj": {
+    "D:\\for_work\\teacher\\C_sharp_programming\\Program1\\Program\\ToDoList\\ToDoList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\ToDoList.csproj",
+        "projectUniqueName": "D:\\for_work\\teacher\\C_sharp_programming\\Program1\\Program\\ToDoList\\ToDoList.csproj",
         "projectName": "ToDoList",
-        "projectPath": "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\ToDoList.csproj",
+        "projectPath": "D:\\for_work\\teacher\\C_sharp_programming\\Program1\\Program\\ToDoList\\ToDoList.csproj",
         "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
-        "outputPath": "D:\\for_work\\teacher\\C_sharp_programming\\Program\\ToDoList\\obj\\",
+        "outputPath": "D:\\for_work\\teacher\\C_sharp_programming\\Program1\\Program\\ToDoList\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -46,7 +46,13 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.3, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
@@ -84,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

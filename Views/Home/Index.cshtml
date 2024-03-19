@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -10,45 +11,41 @@
           <div class="card-body p-4">
 
             <h4 class="text-center my-3 pb-3">To Do App</h4>
-
-            <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2" method="post" action="/Home/Add">
+            <form 
+              class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2"
+              id="addToDoElement" method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="AddElement">
               <div class="col-12">
                 <div class="form-outline">
-                  <input type="text" id="form1" name="textElement" class="form-control" />
+                  <input type="text" id="textElement" name="textElement" class="form-control" />
                   <label class="form-label" for="form1">Enter a task here</label>
                 </div>
               </div>
 
               <div class="col-12">
-                <button type="submit" class="btn btn-primary">Save</button>
+                <input id="inputTextElement" type="button" class="btn btn-primary" value="Save" onclick="AjaxFormSubmit();"/>
               </div>
             </form>
+            @section Scripts
+            {
+              <script>
+                var elText = document.getElementById("textElement");
+                async function AjaxFormSubmit() {
 
-            <table class="table mb-4">
-              <thead>
-                <tr>
-                  <th scope="col">Todo item</th>
-                  <th scope="col">Completed</th>
-                  <th scope="col">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                @foreach (var toDoElement in Model)
-                {
-                  <tr>
-                    <td>@toDoElement.Text</td>
-                    <td>
-                        <input class="form-check-input" type="checkbox" checked="@toDoElement.Completed" onClick="return false;">
-                    </td>
-                    <td>
-                      @Html.ActionLink("Delete", "Delete", new { id = @toDoElement.Id} , new { @class = "btn btn-danger"})
-                      @Html.ActionLink("Finished", "Finish", new { id = @toDoElement.Id} , new { @class = "btn btn-success ms-1"})
-                    </td>
-                  </tr>
+                  var url = "/Home/AddElement";
+                  let response = await fetch(url + "?textElement=" + elText.value);
+                  let data = await response.text();
+
+                  var itemList = document.getElementById("itemList");
+                  itemList.innerHTML = "";
+                  itemList.innerHTML = data;
+
+                  document.getElementById("inputTextElement").value = "";
                 }
-              </tbody>
-            </table>
-
+              </script>
+            }
+            <div id = "itemList">
+              <partial name="TodoElementList"></partial>
+            </div>       
           </div>
         </div>
       </div>

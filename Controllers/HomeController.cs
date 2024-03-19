@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ToDoList.DataAccess.Contracts;
 using ToDoList.DataAccess.Implementations.Entities;
@@ -33,13 +34,13 @@ public class HomeController : Controller
         return RedirectToAction("Index");
     }
 
-    [HttpPost, ActionName("Add")]
+    [HttpGet]
     public IActionResult AddElement(string textElement)
-    {
+    {     
         var newToDoElement = new ToDoElement(textElement);
         _iToDoElementRepository.Add(newToDoElement);
         _iToDoElementRepository.SaveChanges();
-        return RedirectToAction("Index");
+        return PartialView("TodoElementList", _iToDoElementRepository.GetAll().ToList());
     }
 
     [HttpGet, ActionName("Finish")]
